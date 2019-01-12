@@ -2,7 +2,7 @@
 
 Deliverables:
 
-- Have an index that lists out each character by showing their image1, their name, and their house
+<!-- - Have an index that lists out each character by showing their image1, their name, and their house -->
 - When you click on their house it should bring up an edit form to change their house
   - Do this optimistically and then do it using fetch
 - Have 4 sections underneath the list that shows each Hogwarts house (Gryffindor, Slytherin, HufflePuff, Ravenclaw) as well as the image2 for the characters who belong to those houses
