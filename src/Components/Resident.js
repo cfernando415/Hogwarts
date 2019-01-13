@@ -11,11 +11,14 @@ class Resident extends Component{
         this.clickHandler = this.clickHandler.bind(this);
         this.clickHandler2 = this.clickHandler2.bind(this);
     }
+    componentWillUnmount(){
+        console.log("component will unmount");
+    }
     render(){
         return (
             <li>
                 <img src={this.props.character.image2} onClick={this.clickHandler} alt={this.props.character.name} /><br/>
-                {this.state.imgClicked ? <div>Name: {this.props.character.name}<br/>House: <a href="#" onClick={this.clickHandler2}>{this.props.character.house}</a><br/>Role: {this.props.character.role}<br/>Age: {this.props.character.age} </div>: null }
+                {this.state.imgClicked ? <div>Name: {this.props.character.name}<br/>House: <a href="http://localhost:3000/#" onClick={this.clickHandler2}>{this.props.character.house}</a><br/>Role: {this.props.character.role}<br/>Age: {this.props.character.age} </div>: null }
                 {this.state.houseClicked ? <UpdateForm character={this.props.character} updateHandler={this.props.updateHandler} /> : null}
             </li>
         )

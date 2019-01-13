@@ -9,12 +9,13 @@ class CharacterCard extends React.Component {
       clicked: false
     }
   }
+
   render() {
     return (
       <li>
         <img src={this.props.character.image1} alt={this.props.character.name}/><br/>
         Name: {this.props.character.name}<br/>
-        House: <a href="#" onClick={this.clickHandler.bind(this)}>{this.props.character.house}</a><br/>
+        House: <a href="http://localhost:3000/#" onClick={this.clickHandler.bind(this)}>{this.props.character.house}</a><br/>
         {this.state.clicked ? <UpdateForm character={this.props.character} updateHandler={this.props.updateHandler} /> : null}
       </li>
     );
