@@ -4,7 +4,7 @@ import CharacterCard from '../Components/CharacterCard';
 export default class CharacterContainer extends React.Component {
   
   render() {
-    const casts = this.props.casts.map((character, i) => <CharacterCard key={i} character={character} />);
+    const casts = this.props.casts.map((character, i) => <CharacterCard key={i} character={character} updateHandler={this.props.updateHandler} />);
     
     return (
       <div>

@@ -1,7 +1,13 @@
 import React from "react";
+import Residents from './Residents';
 
 const House = props => {
-  return <h1>We Living</h1>;
+  return (
+    <div>
+      <h1>{props.house}</h1>
+      <Residents casts={props.casts} house={props.house} updateHandler={props.updateHandler} />
+    </div>
+    );
 };
 
 export default House;
